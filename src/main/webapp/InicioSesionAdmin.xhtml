@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:color="http://java.sun.com/jsf/html" lang="en"
+
+      xmlns:h="http://java.sun.com/jsf/html"
+
+      xmlns:f="http://java.sun.com/jsf/core"
+
+      xmlns:p="http://primefaces.org/ui">
+
+<head>
+
+</head>
+  <style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: arial;
+  background-image: url('dde.jpg');
+}
+
+.form-login {
+  width: 400px;
+  height: 340px;
+  background: #6a5acd;
+  margin: auto;
+  margin-top: 180px;
+  box-shadow: 7px 13px 37px #white;
+  padding: 20px 30px;
+  border-top: 4px solid #6a5acd;
+  color: white;
+}
+
+.form-login h5 {
+  margin: 0;
+  text-align: center;
+  height: 40px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid;
+  font-size: 20px;
+  
+}
+
+.controls {
+  width: 100%;
+  border: 1px solid #6a5acd;
+  margin-bottom: 15px;
+  padding: 11px 10px;
+  background: #white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.buttons {
+  width: 100%;
+  height: 40px;
+  background: #017bab;
+  border: none;
+  color: white;
+  margin-bottom: 16px;
+}
+
+.form-login p{
+  color: white;
+  height: 40px;
+  text-align: center;
+  border-bottom: 1px solid;
+}
+
+.form-login a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.form-login a:hover {
+  color: white;
+  text-decoration: underline;
+}
+  </style>
+    
+
+  
+  <body>
+  
+    <section class="form-login" >
+      <h5> Bienvenido por favor inicie sesion</h5>
+      <input class="controls" type="text" name="usuario" value="@escuelaing.edu.co" placeholder="Usuario" /> 
+      <input class="controls" type="password" name="contrasena" value="" placeholder="Contraseña" />
+      
+	 <a href="formularioRegistro.xhtml">
+		<input type="submit" class="buttons" value="Ingresar" />
+	 </a>
+	  
+	  
+	</section>
+	 
+  </body>
+  
+</html>

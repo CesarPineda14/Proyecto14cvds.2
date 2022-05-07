@@ -1,0 +1,77 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:color="http://java.sun.com/jsf/html" lang="en"
+
+      xmlns:h="http://java.sun.com/jsf/html"
+
+      xmlns:f="http://java.sun.com/jsf/core"
+
+      xmlns:p="http://primefaces.org/ui">
+<head>
+<title>Bibilioteca Virtual</title>
+</head>
+<style>
+
+ h3 { 
+	color: white; font-family: Brush Script MT;
+	text-align: left;
+	font-size: 200%;
+ }
+  
+  p { 
+	color: black; font-family: Arial;
+	text-align: left;
+ }
+  
+
+
+
+body {
+  font-family: Arial, Helvetica, Sans-serif;
+  color: white; <!-- Color Titulo -->;
+  background-image: url('libros4.jpg'); <!-- Canvas -->;
+  font-size: 20px;
+  text-align: center; <!-- Texto del titulo centrado -->;
+}
+
+.contenido{
+  font-size: 200%;
+  color: white
+  
+}
+
+
+
+</style>
+
+<body>
+
+<h1>Libros</h1>
+<h3>“La lectura de un buen libro es un diálogo incesante en que el libro habla y el alma contesta”.</h3>
+
+<form action="../../form-result.php" method="post" target="_blank">
+
+  <p> "Busqueda de libros por autor:" <input type="search" name="busquedalibros" list="listalibros" /> <input type="submit" value="Buscar" /> </p> 
+
+  
+
+</form>
+
+<datalist id="listalibros">
+
+ <option value="GarciaMarquez" />
+
+  <option value="Vargas llosa" />
+
+  <option value="George Orwell" />
+
+  <option value="Edgar Allan Poe" />
+
+</datalist>
+
+
+
+
+
+
+
+</body>
+</html>

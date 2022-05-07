@@ -1,0 +1,47 @@
+[main]
+
+jdbcRealm = org.apache.shiro.realm.jdbc.JdbcRealm
+
+dataSource =  org.postgresql.ds.PGPoolingDataSource
+
+dataSource.serverName = ec2-3-230-122-20.compute-1.amazonaws.com
+
+dataSource.databaseName = d5l4unc4nkl2uk
+
+dataSource.portNumber = 5432
+
+dataSource.ssl = true
+
+dataSource.sslfactory = org.postgresql.ssl.NonValidatingFactory
+
+dataSource.user = sqfqgmhjqrzgzu
+
+dataSource.password = 24c42ee3a416894ed4e429d468983eeaf970e8bbeab231328cdfef3bbbf06c67
+
+jdbcRealm.dataSource = $dataSource
+
+
+jdbcRealm.authenticationQuery = SELECT contraseña FROM Usuario WHERE correo = ?
+jdbcRealm.userRolesQuery = SELECT tipo FROM Usuario WHERE correo = ?
+
+authc.loginUrl = /faces/InicioSesionComu.xhtml
+
+passwordMatcher = org.apache.shiro.authc.credential.Sha256CredentialsMatcher
+credentialsMatcher = org.apache.shiro.authc.credential.HashedCredentialsMatcher
+credentialsMatcher.hashAlgorithmName = SHA-256
+credentialsMatcher.hashIterations=1
+credentialsMatcher.storedCredentialsHexEncoded = true
+
+
+
+
+
+[urls]
+/faces/InicioSesionComu.xhtml =authc
+/logout = logout
+/faces/InicioSesionAdmin.xhtml = authc, roles[Administrador]
+/faces/formularioRegistro.xhtml = authc, roles[Administrador]
+/faces/inicioSesionComu.xhtml = authc, roles[Usuario]
+/faces/FormularioReserva.xhtml = authc, roles[Administrador]
+/faces/FormularioReserva.xhtml = authc, roles[Usuario]
+

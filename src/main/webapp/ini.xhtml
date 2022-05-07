@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+<head>
+<title></title>
+</head>
+<style>
+.mainmenubtn {
+
+border-radius: 20px;
+background: #6161AB;  <!-- Fondo botones -->;
+  
+  font-family: HelvÃ©tica ;  <!-- Tipo de texto botones -->;
+  color: black;  <!-- Color texto botones -->;
+  font-size: 20px;
+  padding: 19px;
+  text-decoration: none;
+}
+    background-color: skyblue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding:20px;
+    margin-top:20px;
+}
+.mainmenubtn:hover {
+    background-color: blue;
+    }
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-child {
+	border-radius: 20px;
+	background: white;  
+    display: none;
+    background-color: #6161AB; <!-- Color menu desplegable -->;
+    min-width: 200px;
+}
+.dropdown-child a {
+    color: black;  <!-- Color Texto menu desplegable -->;
+    padding: 20px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown:hover .dropdown-child {
+    display: block;
+}
+
+
+
+body {
+  font-family: Arial, Helvetica, Sans-serif;
+  color: black; <!-- Color Titulo -->;
+  background-image: url('edificioiiii.jpg'); <!-- Canvas -->;
+  font-size: 20px;
+  text-align: center; <!-- Texto del titulo centrado -->;
+}
+
+.contenido{
+  font-size: 200%;
+  
+}
+</style>
+
+<body>
+
+<h1>Gestión de Recursos de la Biblioteca</h1>
+
+
+
+<a href="faces/InicioSesionAdmin.xhtml">
+  <button class="mainmenubtn">Ingreso administracion</button>
+</a>
+
+<a href="faces/InicioSesionComu.xhtml">
+  <button class="mainmenubtn">Ingreso Comunidad</button>
+</a> 
+
+
+</body>
+</html>

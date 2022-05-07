@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="edu.eci.cvds.persistence.mybatisimpl.mappers.RecursoMapper">
+
+    <resultMap type='Recurso' id='RecursoResult'>
+        <id property='id' column='id' />
+        <result property='nombre' column='nombre' />
+        <result property='capacidad' column='capacidad' />
+        <result property='disponibilidadInicio' column='disponibilidadInicio' />
+        <result property='disponibilidadFin' column='disponibilidadFin' />
+        <association property="TipoRecurso" javaType="TipoRecurso" columnPrefix="id" resultMap="edu.eci.cvds.persistence.mybatisimpl.mappers.TipoRecursoMapper"></association>
+        <association property="UbicacionRecurso" javaType="UbicacionRecurso" columnPrefix="id" resultMap="edu.eci.cvds.persistence.mybatisimpl.mappers.UbicacionRecursoMapper"></association>
+    </resultMap>
+
+    <select parameterType="map" id="consultarrecurso" resultMap="RecursoResult">
+        SELECT
+        r.nombre,
+        r.capacidad,
+        r.horariodisponibilidadinicio,
+        r.horariodisponibilidadfin
+        FROM Recurso as r;
+    </select>
+
+    <insert id="registrarRecurso" parameterType="map">
+        INSERT INTO Recurso values ((SELECT MAX(id) +1 FROM Recurso),#{recurso.nombre}, #{recurso.capacidad},#{recurso.disponibilidadInicio},#{recurso.disponibilidadFin},#{recurso.tipoRecurso},#{recurso.ubicacionRecurso} )
+    </insert>
+</mapper>

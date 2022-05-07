@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:color="http://java.sun.com/jsf/html" lang="en"
+
+      xmlns:h="http://java.sun.com/jsf/html"
+
+      xmlns:f="http://java.sun.com/jsf/core"
+
+      xmlns:p="http://primefaces.org/ui">
+<head>
+	
+	<title>Gestion de recursos biblioteca</title>
+	
+	 
+	
+</head>
+
+<style>
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	outline: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;	
+	background: #f2f2f2;
+}
+
+/* * ============================== */
+/* * ============ HEADER ========== */
+/* * ============================== */
+
+.navbar {
+	background: #5656B9;
+	position: sticky;
+	top: 0;
+	
+}
+
+.navbar a {
+	color: #fff;
+	display: inline-block;
+	padding: 20px;
+	width: 100%;
+	text-align: center;
+	color: #000;
+	transition: .3s ease-out all;
+}
+
+.navbar a:hover {
+	background: #1D2F3D;
+	color: #fff;
+	text-decoration: none;
+}
+
+.contenedor {
+	max-width: 1000px;
+	width: 90%;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+/* * ============================== */
+/* * ===== CONTENEDOR IMAGEN ====== */
+/* * ============================== */
+
+.contenedor-imagen {
+	height: 100vh;
+}
+
+.contenedor-imagen img {
+	width: 100%;
+	height: 100%;
+	vertical-align: top;
+	object-fit: cover;
+	object-position: 0 bottom;
+}
+
+/* * ============================== */
+/* * ============ MAIN ============ */
+/* * ============================== */
+
+main {
+	min-height: 100vh;
+}
+
+main .contenido p {
+	margin-bottom: 20px;
+	line-height: 30px;
+	color: #525151;
+}
+
+main .contenido .titulo {
+    font-family: 'Montserrat', sans-serif;
+	font-weight: normal;
+	padding-top: 40px;
+}
+
+main .contenido .fecha {
+	font-size: 14px;
+	color: #B5B5B5;
+}
+
+/* * ============================== */
+/* * ============ ASIDE =========== */
+/* * ============================== */
+
+aside {
+	min-width: 30%;
+	margin: 40px 20px 20px 0;
+	height: 100%;
+	background: #1D2F3D;
+	padding: 20px;
+	border-radius: 3px;
+}
+
+aside .titulo {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: normal;
+	font-size: 24px;
+	margin-bottom: 20px;
+	color: #f2f2f2;
+}
+
+aside .indice a {
+	display: block;
+	margin-bottom: 10px;
+	color: #FFCD48;
+}
+
+/* * ============================== */
+/* * ========== FOOTER ============ */
+/* * ============================== */
+
+
+
+/* * ============================== */
+/* * ====== MEDIA QUERIES ========= */
+/* * ============================== */
+@media screen and (max-width: 900px){
+	.navbar .contenedor {
+		flex-wrap: wrap;
+		margin: 0;
+		width: 100%;
+	}
+
+	.navbar a {
+		width: auto;
+		flex: 1;
+	}
+
+	.contenedor-imagen {
+		height: 50vh;
+	}
+
+	main .contenedor {
+		flex-direction: column;
+	}
+
+}
+
+.dropdown-child {
+	border-radius: 20px;
+	background: white;  
+    display: none;
+    background-color: #6161AB; <!-- Color menu desplegable -->;
+    min-width: 200px;
+}
+.dropdown-child a {
+    color: black;  <!-- Color Texto menu desplegable -->;
+    padding: 20px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown:hover .dropdown-child {
+    display: block;
+}
+
+
+</style>
+
+<body>
+	<header>
+		<nav class="navbar">
+			<div class="contenedor">
+				
+				
+				
+				<div class="dropdown">
+					<a class="contenedor">Recursos </a>
+					  <div class="dropdown-child">
+						<a href="Prestamo de Libros.xhtml">Prestamo de Libros</a>
+						<a href="index.xhtml">Salas de estudio</a>
+						<a href="index.xhtml">Computadores</a>
+						<a href="index.xhtml">Tableros inteligentes</a>
+					  </div>
+					
+				</div>
+				<a href="ini.xhtml">Inicio Sesion</a>
+															  
+		 
+			</div>
+		</nav>
+		
+		
+		
+
+		<div class="contenedor-imagen">
+			<a href="#">
+				<img src="https://landing.escuelaing.edu.co/wp-content/uploads/2017/04/maestrias_v2.jpg" alt="" /> 
+			</a>
+			
+		</div>
+	</header>
+	<main id="blog">
+		<div class="contenedor">
+			<aside>
+				<h3 class="titulo">Temas</h3>
+				<nav class="indice">
+					<a href="#">Breve Historia de la escuela</a>
+					<a href="#">La biblioteca</a>
+					<a href="#">Ser Ingenieros de sistemas de la Escuela</a>
+				</nav>
+			</aside>
+			<div class="contenido">
+				<div class="post">
+					<h1 class="titulo">Breve Historia de la Escuela de Ingenieros</h1>
+					
+					<p>
+						La Escuela Colombiana de Ingeniería Julio Garavito es una universidad de carácter privado de Colombia que cuenta con 11 carreras profesionales, 9 especializaciones, 7 maestrías, 1 doctorado y más de 100 programas de educación continuada. Sujeta a inspección y vigilancia del Ministerio de Educación de Colombia. Fundada el 20 de octubre de 1972 y ubicada al Norte de Bogotá se inició con un ambicioso e mportante proyecto educativo: formar ingenieros de excelencia..
+					</p>
+				</div>
+				<div class="post">
+					<h1 class="titulo">La biblioteca</h1>
+					<p>
+						La Biblioteca de la Escuela Colombiana de Ingenieria es un sistema de información que cuenta con una amplia colección de recursos físicos y electrónicos que apoyan la labor académica e investigativa de la Institución en áreas relacionadas con Ingeniería, Administración, Economía, Matemáticas, Ciencias Puras y Ciencias Humanas, entre otras.
+					</p>
+				</div>
+				<div class="post">
+					<h1 class="titulo">Ser Ingenieros de sistemas de la Escuela</h1>
+					
+					<p>
+						El compromiso de la Escuela es que los estudiantes del Programa de Ingeniería de Sistemas se formen como agentes de cambio para un mundo altamente tecnológico, que exige estrategias basadas en modelos de negocio y responsabilidad social. Se logra brindando educación teórica de excelente calidad, prácticas y simulaciones en laboratorios con tecnología de punta, investigación y experiencia laboral dentro y fuera de Colombia.
+					</p>
+				</div>
+					
+			</div>
+		</div>
+	</main>
+
+</body>
+</html>
